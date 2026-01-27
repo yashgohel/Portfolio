@@ -258,6 +258,12 @@ footer {
     flex-direction: column;
   }
 
+  .about-cnt p,
+  #exp ul {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
   /* 4. Fix Skills Section */
   .skills {
     flex-wrap: wrap; /* Allow skills to wrap to next line */
@@ -272,6 +278,10 @@ footer {
   }
 
   /* 5. Footer Adjustments */
+  #certificates .certi-img {
+    width: 90%;
+  }
+  /* 6. Footer Adjustments */
   footer {
     flex-direction: column;
     height: auto;
