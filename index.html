@@ -14,7 +14,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#exp">Experiences</a></li>
+            <li><a href="#experience">Experiences</a></li>
             <li><a href="#skillsec">Skills</a></li>
             <li><a href="#footer">Contact Me</a></li>
           </ul>
@@ -22,9 +22,9 @@
       </nav>
     </header>
     <main>
-      <section id="home">
+      <section id="home" class="hero reveal">
         <div class="leftSection">
-          My name is <span id="purple">Yash.</span><br />
+          My name is <span class="glow">Yash Gohel</span><br />
           I'm a passionate
           <span id="element"></span>
           <div><hr style="width: 0%" /></div>
@@ -47,7 +47,7 @@
         </div>
       </section>
       <hr />
-      <section id="about">
+      <section id="about" class="about reveal">
         <div class="aboutsec">
           <div class="textgray responsivetext">Who am I</div>
           <h2>About</h2>
@@ -67,7 +67,7 @@
         </div>
       </section>
       <hr />
-      <section id="exp">
+      <section id="experience" class="exp reveal">
         <div class="textgray responsivetext">What I've done so far</div>
         <h2>Work Experiences</h2>
         <div>
@@ -101,7 +101,7 @@
         </div>
       </section>
       <hr />
-      <section id="skillsec">
+      <section id="skill" class="skillsec reveal">
         <div class="textgray responsivetext">What I expertise in</div>
         <h2>Skills</h2>
         <div class="skills">
@@ -114,7 +114,7 @@
         </div>
       </section>
       <hr />
-      <section class="certificates" id="certificates">
+      <section class="certificates reveal" id="certificates">
         <div class="textgray responsivetext">For what I've certified</div>
         <h2>Certificates</h2>
         <div>
@@ -138,6 +138,7 @@
       var typed = new Typed("#element", {
         strings: ["Web Developer", "AI Enthusiast", "Mobile Photographer"],
         typeSpeed: 90,
+        loop: true,
       });
     </script>
     <footer>
@@ -157,5 +158,7 @@
         </div>
       </div>
     </footer>
+    <div class="cursor"></div>
+    <script src="script.js"></script>
   </body>
 </html>

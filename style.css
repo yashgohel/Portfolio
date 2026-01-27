@@ -10,23 +10,22 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-header {
-  display: flex;
-  justify-content: space-evenly;
-}
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 72px;
-  background: rgba(0, 0, 0, 0.827);
   position: fixed;
-  width: 100%;
-  backdrop-filter: blur(2px);
+  top: 0;
+  width: 99%;
+  padding: 7px 23px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 nav a {
+  margin-left: 20px;
+  color: #ccc;
   text-decoration: none;
-  color: white;
+  transition: 0.3s;
 }
 nav ul {
   display: flex;
@@ -34,19 +33,19 @@ nav ul {
 }
 nav li {
   list-style: none;
-  margin: 0 25px;
+  margin: 7px 15px;
 }
 .left {
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
 }
-#home {
+.hero {
   display: flex;
   justify-content: space-around;
   margin: 80px 0;
 }
-#home div {
+.hero div {
   width: 30%;
 }
 .rightSection img {
@@ -70,12 +69,12 @@ nav li {
   background-color: rgba(56, 138, 167, 0.827);
   color: black;
 }
-#exp {
+.exp {
   max-width: 80vw;
   margin: auto;
   height: 35vh;
 }
-#about {
+.about {
   max-width: 80vw;
   margin: auto;
   height: 25vh;
@@ -103,9 +102,7 @@ ul {
 .verticle-title p {
   font-size: 1.5rem;
 }
-#purple {
-  color: rgba(51, 187, 236, 0.827);
-}
+
 nav ul li a {
   text-decoration: none;
   color: white;
@@ -146,11 +143,11 @@ footer {
 .button {
   display: table-cell;
 }
-#home > .leftSection {
-  width: 31%;
+.hero > .leftSection {
+  width: 51%;
 }
 
-#skillsec {
+.skillsec {
   max-width: 80vw;
   margin: auto;
   height: 20vh;
@@ -163,9 +160,9 @@ footer {
   height: 50px;
 }
 .skill_cntn:hover {
-  color: rgba(56, 138, 167, 0.827);
+  transform: rotateY(10deg) rotateX(10deg) scale(1.15);
+  text-shadow: 0 0 50px rgba(0, 255, 229, 0.721);
   cursor: pointer;
-  font-size: 20px;
 }
 
 .about-cnt {
@@ -173,7 +170,7 @@ footer {
   margin: auto;
 }
 
-#certificates {
+.certificates {
   max-width: 80vw;
   margin: auto;
   height: 140vh;
@@ -187,10 +184,46 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
-#certificates p {
+.certificates p {
   text-align: inherit;
 }
+/* Cursor */
+.cursor {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #00ffe7;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.05s;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s ease-in-out;
+}
 
+.reveal.active {
+  opacity: 1;
+  transform: translateY(20px);
+}
+.glow {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00ffe7, #7f00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px #00ffe7);
+  }
+  to {
+    filter: drop-shadow(0 0 20px #7f00ff);
+  }
+}
 /* =========================================
    MOBILE RESPONSIVE STYLES
    ========================================= */
