@@ -224,6 +224,42 @@ footer {
     filter: drop-shadow(0 0 20px #7f00ff);
   }
 }
+/* Loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: grid;
+  place-content: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 2.2s;
+}
+
+.loader h1 {
+  font-size: 4rem;
+  letter-spacing: 8px;
+  background: linear-gradient(90deg, #00ffe7, #7f00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 /* =========================================
    MOBILE RESPONSIVE STYLES
    ========================================= */
@@ -234,17 +270,19 @@ footer {
     flex-direction: column; /* Stack logo and links */
     height: auto; /* Let height grow with content */
     padding: 15px 0;
+    text-align: center;
   }
 
   nav ul {
     flex-direction: row; /* Stack menu items vertically */
     padding: 0;
     margin-top: 15px;
-    gap: 10px; /* Space between links */
+    gap: 8px; /* Space between links */
   }
 
   nav li {
     margin: 1px 1px; /* Adjust spacing for vertical list */
+    font-size: x-small;
   }
 
   /* 2. Fix Home Section Layout */
@@ -277,9 +315,9 @@ footer {
   }
   /* 3. Fix Section Heights (Crucial!) */
   /* On mobile, text wraps and gets taller. Fixed 'vh' heights will cut off content. */
-  #exp,
+  #experience,
   #about,
-  #skillsec,
+  #skill,
   #certificates {
     height: auto;
     min-height: auto;
