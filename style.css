@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(8, 8, 55, 0.845);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.827);
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(2px);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  list-style: none;
+  margin: 0 25px;
+}
+.left {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#home {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+#home div {
+  width: 30%;
+}
+.rightSection img {
+  width: 50%;
+  border-radius: 7%;
+  margin: 47px 143px;
+}
+.leftSection {
+  font-size: 2.5rem;
+  margin: 82px 38px;
+}
+.leftSection .btn {
+  padding: 12px;
+  background-color: #000021;
+  color: white;
+  border: 2px solid white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.leftSection .btn:hover {
+  background-color: rgba(56, 138, 167, 0.827);
+  color: black;
+}
+#exp {
+  max-width: 80vw;
+  margin: auto;
+  height: 35vh;
+}
+#about {
+  max-width: 80vw;
+  margin: auto;
+  height: 25vh;
+  display: flex;
+}
+
+.textgray {
+  color: gray;
+}
+.verticle-img {
+  width: 20px;
+}
+.verticle-desc {
+  font-size: 11px;
+  color: gray;
+  display: flex;
+  margin: auto;
+}
+ul {
+  margin: 0px 20px;
+}
+.verticle-title {
+  margin: 10px;
+}
+.verticle-title p {
+  font-size: 1.5rem;
+}
+#purple {
+  color: rgba(51, 187, 236, 0.827);
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  color: rgba(56, 138, 167, 0.827);
+  font-size: 18px;
+}
+#element {
+  color: rgba(51, 187, 236, 0.827);
+}
+main hr {
+  border: 0;
+  background-color: rgba(56, 138, 167, 0.827);
+  height: 1.5px;
+  margin: 15px 60px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.827);
+  position: -webkit-sticky;
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  a:hover {
+    color: blue;
+  }
+}
+#footer {
+  display: flex;
+  margin: 15px 60px;
+  justify-content: space-between;
+}
+.button {
+  display: table-cell;
+}
+#home > .leftSection {
+  width: 31%;
+}
+
+#skillsec {
+  max-width: 80vw;
+  margin: auto;
+  height: 20vh;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.skill_cntn:hover {
+  color: rgba(56, 138, 167, 0.827);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.about-cnt {
+  display: flex;
+  margin: auto;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+  /* 1. Adjust Navigation Bar */
+  nav {
+    flex-direction: column; /* Stack logo and links */
+    height: auto; /* Let height grow with content */
+    padding: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: row; /* Stack menu items vertically */
+    padding: 0;
+    margin-top: 15px;
+    gap: 10px; /* Space between links */
+  }
+
+  nav li {
+    margin: 1px 1px; /* Adjust spacing for vertical list */
+  }
+
+  /* 2. Fix Home Section Layout */
+  #home {
+    flex-direction: column-reverse; /* Put image on top, text below */
+    margin-top: 120px; /* Push down to clear the taller nav bar */
+    text-align: center; /* Center align text */
+    gap: 20px;
+  }
+
+  /* Reset the desktop widths and margins */
+  #home div,
+  #home > .leftSection,
+  .leftSection {
+    width: 90%; /* Use full width on mobile */
+    margin: 0 auto; /* Center the div */
+  }
+  .leftSection .button {
+    display: ruby;
+  }
+  /* Fix the Image */
+  .rightSection img {
+    margin: 20px auto;
+    width: 60%; /* Make image smaller and centered */
+    display: block;
+  }
+  h2,
+  .responsivetext {
+    text-align: center;
+  }
+  /* 3. Fix Section Heights (Crucial!) */
+  /* On mobile, text wraps and gets taller. Fixed 'vh' heights will cut off content. */
+  #exp,
+  #about,
+  #skillsec {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 40px; /* Add breathing room */
+    margin-bottom: 20px;
+  }
+
+  .about-cnt {
+    flex-direction: column;
+  }
+
+  /* 4. Fix Skills Section */
+  .skills {
+    flex-wrap: wrap; /* Allow skills to wrap to next line */
+    justify-content: center;
+    height: auto;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .skill_cntn {
+    margin-bottom: 10px;
+  }
+
+  /* 5. Footer Adjustments */
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #footer {
+    margin: 0;
+    justify-content: center;
+  }
+}

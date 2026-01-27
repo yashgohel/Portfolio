@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Yash - Developer Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Yash's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#exp">Experiences</a></li>
+            <li><a href="#skillsec">Skills</a></li>
+            <li><a href="#footer">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="leftSection">
+          My name is <span id="purple">Yash.</span><br />
+          I'm a passionate
+          <span id="element"></span>
+          <div><hr style="width: 0%" /></div>
+          <div class="button">
+            <button class="btn" onclick="window.location.href = 'Resume.pdf'">
+              Download Resume
+            </button>
+            <button
+              class="btn"
+              onclick="
+                window.location.href = 'https://www.github.com/yashgohel'
+              "
+            >
+              Visit Github
+            </button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="Yash.png" alt="Yash Image" />
+        </div>
+      </section>
+      <hr />
+      <section id="about">
+        <div class="aboutsec">
+          <div class="textgray responsivetext">Which experiences I have</div>
+          <h2>Professional Experiences</h2>
+          <div class="about-cnt">
+            <div class="textgray">
+              <p>
+                Dynamic professional with a proven track record at Etech Global
+                Services, excelling in CRM software and customer service
+                strategies. Enhanced sales through effective problem resolution
+                and streamlined order processing. Adept at team collaboration
+                and relationship management, leveraging technical skills in
+                Salesforce to drive operational efficiency and customer
+                satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="exp">
+        <div class="textgray responsivetext">What I've done so far</div>
+        <h2>Work Experiences</h2>
+        <div>
+          <div class="verticle-title">
+            <p>
+              <img class="verticle-img" src="cs.png" alt="customer support" />
+              Online Chat Representative
+            </p>
+          </div>
+          <div class="textgray">
+            <ul>
+              <li>
+                Provided exceptional customer support as an Online Chat
+                Representative at Etech Global Services, ensuring high customer
+                satisfaction.
+              </li>
+              <li>
+                Utilized CRM tools to efficiently manage customer inquiries and
+                resolve issues, enhancing the overall customer experience.
+              </li>
+              <li>
+                Collaborated with team members to streamline processes,
+                contributing to a more effective service environment.
+              </li>
+              <li>
+                Achieved a 95% customer satisfaction rating through effective
+                communication and problem-solving skills.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="skillsec">
+        <div class="textgray responsivetext">What I expertise in</div>
+        <h2>Skills</h2>
+        <div class="skills">
+          <p class="skill_cntn">HTML/CSS</p>
+          <p class="skill_cntn">Python</p>
+          <p class="skill_cntn">Web Development</p>
+          <p class="skill_cntn">Generative AI</p>
+          <p class="skill_cntn">CRM Software</p>
+          <p class="skill_cntn">Microsoft Office</p>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "AI Enthusiast", "Mobile Photographer"],
+        typeSpeed: 90,
+      });
+    </script>
+    <footer>
+      <div id="footer">
+        <div>Yash's Dev Portfolio</div>
+      </div>
+      <div class="footer">
+        <div>&copy; 2026 Yash Gohel. All rights reserved.</div>
+      </div>
+      <div class="footer">
+        <div>Email : yashgohel0000@gmail.com</div>
+      </div>
+      <div class="footer">
+        <div>
+          LinkedIn :
+          <a href="https://linkedin.com/in/yashgohel">yashgohel</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
