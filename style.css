@@ -173,6 +173,24 @@ footer {
   margin: auto;
 }
 
+#certificates {
+  max-width: 80vw;
+  margin: auto;
+  height: 140vh;
+}
+.certi-img {
+  width: 40%;
+  border: 7px solid #367a9966;
+  border-radius: 12px;
+  border-style: double;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+#certificates p {
+  text-align: inherit;
+}
+
 /* =========================================
    MOBILE RESPONSIVE STYLES
    ========================================= */
@@ -228,7 +246,8 @@ footer {
   /* On mobile, text wraps and gets taller. Fixed 'vh' heights will cut off content. */
   #exp,
   #about,
-  #skillsec {
+  #skillsec,
+  #certificates {
     height: auto;
     min-height: auto;
     padding-bottom: 40px; /* Add breathing room */
