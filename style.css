@@ -365,4 +365,7 @@ footer {
     margin: 0;
     justify-content: center;
   }
+  .cursor {
+    position: relative;
+  }
 }
