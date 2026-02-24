@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Yash - Developer Portfolio</title>
   </head>
   <body>
@@ -25,7 +32,7 @@
       </nav>
     </header>
     <main>
-      <section id="home" class="hero reveal">
+      <section id="home" class="hero">
         <div class="leftSection">
           My name is <span class="glow">Yash Gohel</span><br />
           I'm a passionate
@@ -49,13 +56,16 @@
           <img src="Yash.png" alt="Yash Image" />
         </div>
       </section>
+      <div class="scroll-txt">
+        Scroll to explore!<i class="fa-solid fa-angles-up bounce"></i>
+      </div>
       <hr />
       <section id="about" class="about reveal">
         <div class="aboutsec">
           <div class="textgray responsivetext">Who am I</div>
           <h2>About</h2>
           <div class="about-cnt">
-            <div class="textgray">
+            <div class="thin">
               <p>
                 Computer Science graduate transitioning into software
                 development with a focus on Python, Generative AI, and Full
@@ -80,7 +90,7 @@
               Online Chat Representative
             </p>
           </div>
-          <div class="textgray">
+          <div class="thin">
             <ul>
               <li>
                 Provided exceptional customer support as an Online Chat
@@ -107,7 +117,7 @@
       <section id="skill" class="skillsec reveal">
         <div class="textgray responsivetext">What I expertise in</div>
         <h2>Skills</h2>
-        <div class="skills">
+        <div class="skills thin">
           <p class="skill_cntn">HTML/CSS</p>
           <p class="skill_cntn">Python</p>
           <p class="skill_cntn">Web Development</p>
@@ -121,7 +131,7 @@
         <div class="textgray responsivetext">For what I've certified</div>
         <h2>Certificates</h2>
         <div>
-          <div class="verticle-title">
+          <div class="verticle-title thin">
             <p>
               ✵ Complete 2026 Python Bootcamp: Learn Python from Scratch by Code
               with Harry
@@ -161,7 +171,7 @@
         </div>
       </div>
     </footer>
-    <div class="cursor"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

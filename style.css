@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+.thin {
+  font-weight: 200;
 }
 body {
   background-color: rgba(8, 8, 55, 0.845);
@@ -125,14 +129,15 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.827);
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.4);
   position: -webkit-sticky;
   a {
     color: rgb(255, 255, 255);
     text-decoration: none;
   }
   a:hover {
-    color: blue;
+    color: rgba(56, 138, 167, 0.827);
   }
 }
 #footer {
@@ -188,40 +193,26 @@ footer {
   text-align: inherit;
 }
 /* Cursor */
-.cursor {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #00ffe7;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: 0.05s;
-}
+
 .reveal {
   opacity: 0;
-  transform: translateY(60px);
-  transition: 1s ease-in-out;
+  transform: translateY(80px);
+  transition: 0.8s ease-in-out;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(20px);
 }
-.glow {
-  font-size: 3rem;
-  background: linear-gradient(90deg, #00ffe7, #7f00ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: glow 3s infinite alternate;
+.bounce {
+  animation: bounce 1s infinite alternate;
 }
-@keyframes glow {
+@keyframes bounce {
   from {
-    filter: drop-shadow(0 0 5px #00ffe7);
+    transform: translateY(-0px);
   }
   to {
-    filter: drop-shadow(0 0 20px #7f00ff);
+    transform: translateY(-12px);
   }
 }
 /* Loader */
@@ -244,6 +235,20 @@ footer {
   background-clip: text;
   color: transparent;
   animation: pulse 1s infinite alternate;
+}
+.scroll-txt {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+i {
+  margin-left: 20px;
+  margin-top: 15px;
+  zoom: 60%;
 }
 @keyframes pulse {
   from {
@@ -299,6 +304,9 @@ footer {
   .leftSection {
     width: 90%; /* Use full width on mobile */
     margin: 0 auto; /* Center the div */
+  }
+  .leftSection {
+    font-size: 2.5rem;
   }
   .leftSection .button {
     display: ruby;
